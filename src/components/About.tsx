@@ -1,0 +1,122 @@
+import { Card } from '@/components/ui/card';
+import { GraduationCap, Heart, Code, Dumbbell } from 'lucide-react';
+
+const About = () => {
+  const timelineItems = [
+    {
+      icon: <GraduationCap className="h-6 w-6" />,
+      title: "Current Education",
+      subtitle: "10th Grade at Arundhati Gurukulam",
+      description: "Pursuing academic excellence while diving deep into programming and Sanskrit studies.",
+      year: "2024"
+    },
+    {
+      icon: <Heart className="h-6 w-6" />,
+      title: "Spiritual Foundation",
+      subtitle: "Devotee of Lord Shiva, Hanuman & Chhatrapati Shivaji Maharaj",
+      description: "Drawing inspiration from spiritual teachings and the legacy of great warriors.",
+      year: "Ongoing"
+    },
+    {
+      icon: <Code className="h-6 w-6" />,
+      title: "Programming Journey",
+      subtitle: "Sanskrit Computation & Full-Stack Development",
+      description: "Specializing in Sanskrit computation tools, matrix calculators, and chandas-based applications.",
+      year: "2023+"
+    },
+    {
+      icon: <Dumbbell className="h-6 w-6" />,
+      title: "Personal Interests",
+      subtitle: "Yoga, Workouts & Coding",
+      description: "Maintaining physical and mental balance while pursuing technological excellence.",
+      year: "Daily"
+    }
+  ];
+
+  return (
+    <section id="about" className="py-20 relative">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 scroll-reveal">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            About <span className="gradient-text">Me</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            I'm a dedicated student with a passion for yoga, workouts, and most of all, coding. 
+            I focus on Sanskrit computation, full-stack web development, and Java. My spiritual 
+            inspiration comes from Lord Shiva, Hanuman, and my hero—Chhatrapati Shivaji Maharaj.
+          </p>
+        </div>
+
+        {/* Personal Info Card */}
+        <div className="mb-16 scroll-reveal">
+          <Card className="glass-card p-8 hover-lift">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold mb-4 gradient-text">Shrirama R</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <span className="w-2 h-2 bg-primary rounded-full"></span>
+                    <span className="text-muted-foreground">Student at Arundhati Gurukulam</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span className="w-2 h-2 bg-accent rounded-full"></span>
+                    <span className="text-muted-foreground">Currently in 10th Grade</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span className="w-2 h-2 bg-secondary rounded-full"></span>
+                    <span className="text-muted-foreground">Future Services Domain Professional</span>
+                  </div>
+                </div>
+              </div>
+              <div className="text-center md:text-right">
+                <div className="inline-block p-6 glass-card rounded-2xl">
+                  <div className="text-3xl font-bold gradient-text mb-2">3+</div>
+                  <div className="text-muted-foreground">Years of Coding</div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Timeline */}
+        <div className="scroll-reveal">
+          <h3 className="text-3xl font-bold text-center mb-12">My <span className="gradient-text">Journey</span></h3>
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-primary transform md:-translate-x-1/2"></div>
+            
+            <div className="space-y-12">
+              {timelineItems.map((item, index) => (
+                <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                  {/* Timeline Dot */}
+                  <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-1/2 glow-primary z-10"></div>
+                  
+                  {/* Content */}
+                  <div className={`ml-20 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
+                    <Card className="glass-card p-6 hover-lift">
+                      <div className="flex items-start space-x-4">
+                        <div className="p-3 bg-gradient-primary rounded-xl text-white flex-shrink-0">
+                          {item.icon}
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between mb-2">
+                            <h4 className="text-xl font-bold">{item.title}</h4>
+                            <span className="text-sm text-primary font-medium">{item.year}</span>
+                          </div>
+                          <h5 className="text-primary font-medium mb-2">{item.subtitle}</h5>
+                          <p className="text-muted-foreground">{item.description}</p>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
