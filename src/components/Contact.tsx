@@ -63,7 +63,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Get In <span className="gradient-text">Touch</span>
+            Get In <span className="holographic">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Let's collaborate and create something amazing together
@@ -73,7 +73,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="scroll-reveal">
-            <Card className="glass-card p-8 h-fit">
+            <Card className="neo-card card-3d p-8 h-fit neon-border">
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <p className="text-muted-foreground mb-8">
                 Feel free to reach out for project collaborations, Sanskrit computation discussions, 
@@ -120,7 +120,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="scroll-reveal">
-            <Card className="glass-card p-8">
+            <Card className="neo-card card-3d p-8">
               <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -186,7 +186,7 @@ const Contact = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center scroll-reveal">
-          <Card className="glass-card p-8 bg-gradient-primary/10 border-primary/20">
+          <Card className="neo-card p-8 bg-gradient-primary/10 border-primary/20 neon-border">
             <h3 className="text-2xl font-bold mb-4">Ready to Collaborate?</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Whether you're interested in Sanskrit computation, need web development services, 

@@ -32,7 +32,7 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            My <span className="gradient-text">Projects</span>
+            My <span className="holographic">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Innovative solutions combining traditional knowledge with modern technology
@@ -42,7 +42,7 @@ const Projects = () => {
         {/* Project Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {projectCategories.map((project, index) => (
-            <Card key={index} className="glass-card p-6 hover-lift scroll-reveal">
+            <Card key={index} className="neo-card card-3d p-6 hover-lift scroll-reveal neon-border">
               <div className="mb-6">
                 <div className="p-4 bg-gradient-primary rounded-2xl text-white w-fit mb-4">
                   {project.icon}
@@ -69,7 +69,7 @@ const Projects = () => {
 
         {/* Privacy Notice */}
         <div className="scroll-reveal">
-          <Card className="glass-card p-8 text-center border-amber-500/20 bg-amber-500/5">
+          <Card className="neo-card p-8 text-center border-amber-500/20 bg-amber-500/5 neon-border">
             <div className="flex items-center justify-center space-x-3 mb-4">
               <Eye className="h-6 w-6 text-amber-500" />
               <h3 className="text-2xl font-bold">Private Development Work</h3>
@@ -87,7 +87,7 @@ const Projects = () => {
 
         {/* Skills Showcase */}
         <div className="mt-16 scroll-reveal">
-          <Card className="glass-card p-8">
+          <Card className="neo-card card-3d p-8">
             <h3 className="text-2xl font-bold text-center mb-8">
               Project <span className="gradient-text">Highlights</span>
             </h3>

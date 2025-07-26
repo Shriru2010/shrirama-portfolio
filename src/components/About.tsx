@@ -49,10 +49,10 @@ const About = () => {
 
         {/* Personal Info Card */}
         <div className="mb-16 scroll-reveal">
-          <Card className="glass-card p-8 hover-lift">
+          <Card className="neo-card card-3d p-8 hover-lift">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-4 gradient-text">Shrirama R</h3>
+                <h3 className="text-2xl font-bold mb-4 holographic">Shrirama R</h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <span className="w-2 h-2 bg-primary rounded-full"></span>
@@ -93,7 +93,7 @@ const About = () => {
                   
                   {/* Content */}
                   <div className={`ml-20 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                    <Card className="glass-card p-6 hover-lift">
+                    <Card className="neo-card card-3d p-6 hover-lift neon-border">
                       <div className="flex items-start space-x-4">
                         <div className="p-3 bg-gradient-primary rounded-xl text-white flex-shrink-0">
                           {item.icon}

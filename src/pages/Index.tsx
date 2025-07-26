@@ -7,6 +7,8 @@ import Projects from '@/components/Projects';
 import FuturePlans from '@/components/FuturePlans';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import ParticleSystem from '@/components/ParticleSystem';
+import FloatingActionButton from '@/components/FloatingActionButton';
 
 const Index = () => {
   useEffect(() => {
@@ -33,7 +35,8 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <ParticleSystem />
       <Header />
       <main>
         <Hero />
@@ -44,6 +47,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <FloatingActionButton />
     </div>
   );
 };

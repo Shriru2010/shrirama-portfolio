@@ -45,7 +45,7 @@ const Skills = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            My <span className="gradient-text">Skills</span>
+            My <span className="holographic">Skills</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Blending traditional Sanskrit knowledge with modern technology to create innovative solutions.
@@ -55,7 +55,7 @@ const Skills = () => {
         {/* Skills Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="glass-card p-6 hover-lift scroll-reveal">
+            <Card key={index} className="neo-card card-3d p-6 hover-lift scroll-reveal neon-border">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="p-3 bg-gradient-primary rounded-xl text-white">
                   {category.icon}
@@ -85,7 +85,7 @@ const Skills = () => {
 
         {/* Tools Section */}
         <div className="scroll-reveal">
-          <Card className="glass-card p-8">
+          <Card className="neo-card card-3d p-8">
             <div className="text-center mb-8">
               <div className="inline-flex items-center space-x-3 mb-4">
                 <Zap className="h-6 w-6 text-primary" />
@@ -110,7 +110,7 @@ const Skills = () => {
 
         {/* Specialty Highlight */}
         <div className="mt-16 scroll-reveal">
-          <Card className="glass-card p-8 text-center bg-gradient-primary/10 border-primary/20">
+          <Card className="neo-card p-8 text-center bg-gradient-primary/10 border-primary/20 neon-border">
             <Cpu className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Sanskrit Computation Specialist</h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">

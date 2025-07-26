@@ -44,7 +44,7 @@ const FuturePlans = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Future <span className="gradient-text">Plans</span>
+            Future <span className="holographic">Plans</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Envisioning the future where tradition meets innovation
@@ -53,7 +53,7 @@ const FuturePlans = () => {
 
         {/* Coming Soon Banner */}
         <div className="mb-16 scroll-reveal">
-          <Card className="glass-card p-8 text-center bg-gradient-primary/10 border-primary/20 relative overflow-hidden">
+          <Card className="neo-card p-8 text-center bg-gradient-primary/10 border-primary/20 relative overflow-hidden neon-border">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5"></div>
             <div className="relative z-10">
               <div className="inline-flex items-center space-x-3 mb-4">
@@ -77,7 +77,7 @@ const FuturePlans = () => {
         {/* Future Plans Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {futurePlans.map((plan, index) => (
-            <Card key={index} className="glass-card p-6 hover-lift scroll-reveal">
+            <Card key={index} className="neo-card card-3d p-6 hover-lift scroll-reveal neon-border">
               <div className="flex items-start space-x-4">
                 <div className={`p-3 ${plan.color} rounded-xl text-white flex-shrink-0`}>
                   {plan.icon}
@@ -102,7 +102,7 @@ const FuturePlans = () => {
 
         {/* Vision Statement */}
         <div className="scroll-reveal">
-          <Card className="glass-card p-8 text-center">
+          <Card className="neo-card card-3d p-8 text-center">
             <h3 className="text-2xl font-bold mb-6">
               My <span className="gradient-text">Vision</span>
             </h3>
