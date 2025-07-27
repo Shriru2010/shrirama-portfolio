@@ -75,12 +75,7 @@ const Contact = () => {
       value: "shriru2010",
       href: "https://snapchat.com/add/shriru2010"
     },
-    {
-      icon: <MapPin className="h-6 w-6" />,
-      label: "Location",
-      value: "Arundhati Gurukulam",
-      href: "#"
-    }
+    // Removed the location entry as per user request
   ];
 
   return (
