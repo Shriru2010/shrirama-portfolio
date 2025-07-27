@@ -14,6 +14,9 @@
     /* Added gradient-hero background for visibility fix */
     --gradient-hero: linear-gradient(135deg, hsl(220 20% 6%), hsl(240 30% 15%));
 
+    /* Added gradient-primary background for gradient-text */
+    --gradient-primary: linear-gradient(90deg, hsl(240 100% 70%), hsl(280 100% 75%));
+
     /* Card System */
     --card: 220 20% 8%;
     --card-foreground: 210 40% 98%;
