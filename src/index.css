@@ -11,6 +11,9 @@
     --background: 220 20% 6%;
     --foreground: 210 40% 98%;
 
+    /* Added gradient-hero background for visibility fix */
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 6%), hsl(240 30% 15%));
+
     /* Card System */
     --card: 220 20% 8%;
     --card-foreground: 210 40% 98%;
