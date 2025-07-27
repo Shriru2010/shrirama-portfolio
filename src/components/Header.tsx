@@ -30,7 +30,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/20">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="font-orbitron font-bold text-xl">
-          <span className="text-primary">S</span><span className="gradient-text">ॐ</span>
+          <span className="text-primary">S</span><span className="gradient-text"></span>
         </div>
 
         {/* Desktop Navigation */}

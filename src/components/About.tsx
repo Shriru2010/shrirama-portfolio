@@ -44,7 +44,7 @@ const About = () => {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <span className="w-2 h-2 bg-primary rounded-full"></span>
-                    <span className="text-muted-foreground">10th Grade Student</span>
+                    <span className="text-muted-foreground">Student of Arundhti Gurukulam</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="w-2 h-2 bg-accent rounded-full"></span>
