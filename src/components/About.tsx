@@ -1,50 +1,38 @@
 import { Card } from '@/components/ui/card';
 import { GraduationCap, Heart, Code, Dumbbell } from 'lucide-react';
-
 const About = () => {
-  const timelineItems = [
-    {
-      icon: <GraduationCap className="h-6 w-6" />,
-      title: "Current Education",
-      subtitle: "10th Grade at Arundhati Gurukulam",
-      description: "Pursuing academic excellence while diving deep into programming and Sanskrit studies.",
-      year: "2024"
-    },
-    {
-      icon: <Heart className="h-6 w-6" />,
-      title: "Spiritual Foundation",
-      subtitle: "Devotee of Lord Shiva, Hanuman & Chhatrapati Shivaji Maharaj",
-      description: "Drawing inspiration from spiritual teachings and the legacy of great warriors.",
-      year: "Ongoing"
-    },
-    {
-      icon: <Code className="h-6 w-6" />,
-      title: "Programming Journey",
-      subtitle: "Sanskrit Computation & Full-Stack Development",
-      description: "Specializing in Sanskrit computation tools, matrix calculators, and chandas-based applications.",
-      year: "2023+"
-    },
-    {
-      icon: <Dumbbell className="h-6 w-6" />,
-      title: "Personal Interests",
-      subtitle: "Yoga, Workouts & Coding",
-      description: "Maintaining physical and mental balance while pursuing technological excellence.",
-      year: "Daily"
-    }
-  ];
-
-  return (
-    <section id="about" className="py-20 relative">
+  const timelineItems = [{
+    icon: <GraduationCap className="h-6 w-6" />,
+    title: "Current Education",
+    subtitle: "10th Grade at Arundhati Gurukulam",
+    description: "Pursuing academic excellence while diving deep into programming and Sanskrit studies.",
+    year: "2024"
+  }, {
+    icon: <Heart className="h-6 w-6" />,
+    title: "Spiritual Foundation",
+    subtitle: "Devotee of Lord Shiva, Hanuman & Chhatrapati Shivaji Maharaj",
+    description: "Drawing inspiration from spiritual teachings and the legacy of great warriors.",
+    year: "Ongoing"
+  }, {
+    icon: <Code className="h-6 w-6" />,
+    title: "Programming Journey",
+    subtitle: "Sanskrit Computation & Full-Stack Development",
+    description: "Specializing in Sanskrit computation tools, matrix calculators, and chandas-based applications.",
+    year: "2023+"
+  }, {
+    icon: <Dumbbell className="h-6 w-6" />,
+    title: "Personal Interests",
+    subtitle: "Yoga, Workouts & Coding",
+    description: "Maintaining physical and mental balance while pursuing technological excellence.",
+    year: "Daily"
+  }];
+  return <section id="about" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm a dedicated student with a passion for yoga, workouts, and most of all, coding. 
-            I focus on Sanskrit computation, full-stack web development, and Java. My spiritual 
-            inspiration comes from Lord Shiva, Hanuman, and my hero—Chhatrapati Shivaji Maharaj.
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">I'm a dedicated student with a passion for yoga, and most of all, coding. I focus on Sanskrit computation, full-stack web development, and Java. My spiritual inspiration comes from Lord Shiva, Hanuman, and my hero—Chhatrapati Shivaji Maharaj.</p>
         </div>
 
         {/* Personal Info Card */}
@@ -86,8 +74,7 @@ const About = () => {
             <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-primary transform md:-translate-x-1/2"></div>
             
             <div className="space-y-12">
-              {timelineItems.map((item, index) => (
-                <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              {timelineItems.map((item, index) => <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   {/* Timeline Dot */}
                   <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-1/2 glow-primary z-10"></div>
                   
@@ -109,14 +96,11 @@ const About = () => {
                       </div>
                     </Card>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
