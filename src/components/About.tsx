@@ -4,7 +4,7 @@ const About = () => {
   const timelineItems = [{
     icon: <GraduationCap className="h-6 w-6" />,
     title: "Current Education",
-    subtitle: "10th Grade Student",
+    subtitle: "10th Grade Student at Arundhati Gurukulam",
     description: "Pursuing academic excellence while diving deep into programming and Sanskrit studies.",
     year: "2024"
   }, {
