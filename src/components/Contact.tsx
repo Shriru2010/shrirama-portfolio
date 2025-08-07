@@ -123,15 +123,20 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Instagram Placeholder */}
-              <div className="mt-8 p-4 glass-card rounded-lg border-dashed border-muted-foreground/30">
+              {/* Instagram */}
+              <div className="mt-8 p-4 glass-card rounded-lg">
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center">
                     <span className="text-white text-xs font-bold">IG</span>
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Instagram</p>
-                    <p className="font-medium text-muted-foreground">Coming Soon</p>
+                    <a 
+                      href="https://instagram.com/shriru10" 
+                      className="font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      @shriru10
+                    </a>
                   </div>
                 </div>
               </div>
