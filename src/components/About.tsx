@@ -4,9 +4,15 @@ const About = () => {
   const timelineItems = [{
     icon: <GraduationCap className="h-6 w-6" />,
     title: "Current Education",
-    subtitle: "10th Grade Student at Arundhati Gurukulam",
+    subtitle: "10th Grade Student",
     description: "Pursuing academic excellence while diving deep into programming and Sanskrit studies.",
     year: "2024"
+  }, {
+    icon: <Code className="h-6 w-6" />,
+    title: "NEORISHI DEVELOPERS",
+    subtitle: "Founder & CEO of Tech Startup",
+    description: "Founded a technology startup that blends traditional wisdom with modern innovation, sharing the same spiritual and technological ideologies.",
+    year: "2024+"
   }, {
     icon: <Heart className="h-6 w-6" />,
     title: "Spiritual Foundation",
@@ -44,7 +50,7 @@ const About = () => {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <span className="w-2 h-2 bg-primary rounded-full"></span>
-                    <span className="text-muted-foreground">Student of Arundhti Gurukulam</span>
+                    <span className="text-muted-foreground">Founder & CEO, NEORISHI DEVELOPERS</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="w-2 h-2 bg-accent rounded-full"></span>
@@ -52,7 +58,7 @@ const About = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                    <span className="text-muted-foreground">Future Services Domain Professional</span>
+                    <span className="text-muted-foreground">Tech Entrepreneur & Calisthenics Athlete</span>
                   </div>
                 </div>
               </div>
