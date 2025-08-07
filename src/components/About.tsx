@@ -21,9 +21,9 @@ const About = () => {
     year: "2023+"
   }, {
     icon: <Dumbbell className="h-6 w-6" />,
-    title: "Personal Interests",
-    subtitle: "Yoga, Workouts & Coding",
-    description: "Maintaining physical and mental balance while pursuing technological excellence.",
+    title: "Athletic Pursuits",
+    subtitle: "Calisthenics Athlete & Yoga Practitioner",
+    description: "Excelling in bodyweight training and maintaining physical and mental balance through dedicated practice.",
     year: "Daily"
   }];
   return <section id="about" className="py-20 relative">
