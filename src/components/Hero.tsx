@@ -42,27 +42,27 @@ const Hero = () => {
         <div className="absolute bottom-1/4 left-3/4 w-4 h-4 bg-secondary/30 rotate-12 hero-float" style={{ animationDelay: '5s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Left Side - Content */}
-        <div className="space-y-8 text-center lg:text-left">
+      <div className="container mx-auto px-4 flex items-center justify-center relative z-10">
+        {/* Content */}
+        <div className="space-y-8 text-center max-w-4xl">
           <div className="space-y-4">
             <h1 className="text-5xl lg:text-7xl font-black leading-tight">
               <span className="block text-foreground glitch">Shrirama</span>
               <span className="block holographic">R</span>
             </h1>
             
-            <div className="h-16 flex items-center justify-center lg:justify-start">
+            <div className="h-16 flex items-center justify-center">
               <p className="text-xl lg:text-2xl text-muted-foreground typing-animation">
                 {typedText}
               </p>
             </div>
           </div>
 
-          <p className="text-lg lg:text-xl text-muted-foreground max-w-xl">
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             Hi, I'm Shrirama R, a passionate teen developer devoted to Sanskrit computation and full-stack technology.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               className="bg-gradient-primary hover:glow-primary font-medium"
@@ -80,30 +80,6 @@ const Hero = () => {
               Download Resume
               <Download className="ml-2 h-5 w-5" />
             </Button>
-          </div>
-        </div>
-
-        {/* Right Side - Profile Picture Placeholder */}
-        <div className="flex justify-center lg:justify-end">
-          <div className="relative">
-            <div className="w-80 h-80 lg:w-96 lg:h-96 neo-card card-3d rounded-3xl p-8 flex items-center justify-center neon-border">
-              <div className="w-full h-full bg-gradient-primary rounded-2xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
-                <div className="absolute inset-0 bg-gradient-mesh opacity-20"></div>
-                <div className="relative z-10 text-center">
-                  <div className="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center energy-pulse">
-                    <span className="text-3xl font-orbitron font-bold text-white holographic">SR</span>
-                  </div>
-                  <p className="text-white/80 font-medium">Profile Picture</p>
-                  <p className="text-white/60 text-sm mt-1">Upload Later</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Enhanced Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full glow-primary hero-float energy-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent rounded-full hero-float energy-pulse" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/2 -right-8 w-4 h-4 bg-secondary rounded-full hero-float" style={{ animationDelay: '2s' }}></div>
           </div>
         </div>
       </div>
