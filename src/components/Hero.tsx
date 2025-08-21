@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Download, Zap, Star, Code, Heart } from 'lucide-react';
+import { ArrowDown, Download, Zap, Star, Code, Heart, Github } from 'lucide-react';
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
@@ -145,6 +145,19 @@ const Hero = () => {
                 <ArrowDown className="ml-3 h-6 w-6 group-hover:animate-bounce" />
               </span>
               <div className="absolute inset-0 bg-gradient-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="magnetic-button ripple-effect px-8 py-4 text-lg font-semibold holo-border hover:shadow-glow transition-all duration-500 group relative overflow-hidden"
+              onClick={() => window.open('https://github.com/Shriru2010', '_blank')}
+            >
+              <span className="relative z-10 flex items-center">
+                GitHub Profile
+                <Github className="ml-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+              </span>
+              <div className="absolute inset-0 gradient-shift opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </Button>
             
             <Button 
