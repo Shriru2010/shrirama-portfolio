@@ -98,7 +98,7 @@ const Hero = () => {
 
           <div className="space-y-6 animate-fade-in-up stagger-4">
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Hi, I'm Shrirama R, a passionate teen developer devoted to 
+              जय श्रीराम, I'm Shrirama R, a passionate teen developer devoted to 
               <span className="gradient-text font-semibold"> Sanskrit computation</span> and 
               <span className="gradient-text font-semibold"> full-stack technology</span>.
             </p>
