@@ -36,17 +36,6 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Om Symbol at Top Center */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="relative group cursor-pointer">
-          <span className="text-5xl lg:text-6xl font-orbitron font-bold prismatic-text animate-pulse-glow hover:scale-110 transition-all duration-500 inline-block">
-            ॐ
-          </span>
-          <div className="absolute -inset-4 bg-gradient-primary rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-500 blur-xl animate-float-up"></div>
-          <div className="absolute inset-0 bg-gradient-aurora rounded-full opacity-20 animate-ping-large"></div>
-        </div>
-      </div>
-
       {/* Ultra-Dynamic Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Aurora Background Animation */}
@@ -86,6 +75,17 @@ const Hero = () => {
         {/* Enhanced Content with Advanced Animations */}
         <div className="space-y-8 text-center max-w-5xl">
           <div className="space-y-6">
+            {/* Om Symbol above name */}
+            <div className="mb-8">
+              <div className="relative group cursor-pointer inline-block">
+                <span className="text-4xl lg:text-5xl font-orbitron font-bold prismatic-text animate-pulse-glow hover:scale-110 transition-all duration-500 inline-block">
+                  ॐ
+                </span>
+                <div className="absolute -inset-3 bg-gradient-primary rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-500 blur-xl animate-float-up"></div>
+                <div className="absolute inset-0 bg-gradient-aurora rounded-full opacity-20 animate-ping-large"></div>
+              </div>
+            </div>
+            
             <h1 className="text-6xl lg:text-8xl font-black leading-tight relative group">
               <span className="block text-foreground animate-fade-in-up stagger-1 hover:scale-105 transition-transform duration-300 cursor-default">
                 Shrirama
