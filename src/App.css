@@ -40,24 +40,77 @@
 .read-the-docs {
   color: #888;
 }
+/* Enhanced Modern Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 12px;
-  background: #f0f0f0;
-  border-radius: 8px;
+  width: 14px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted) / 0.1);
+  border-radius: 12px;
+  margin: 4px;
+  border: 1px solid hsl(var(--border) / 0.2);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--primary) / 0.8) 50%,
+    hsl(var(--accent)) 100%
+  );
+  border-radius: 12px;
+  border: 2px solid hsl(var(--background));
+  box-shadow: 
+    0 4px 12px hsl(var(--primary) / 0.3),
+    inset 0 1px 0 hsl(var(--primary) / 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.9) 0%,
+    hsl(var(--primary)) 50%,
+    hsl(var(--accent) / 1.1) 100%
+  );
+  box-shadow: 
+    0 6px 20px hsl(var(--primary) / 0.4),
+    inset 0 1px 0 hsl(var(--primary) / 0.6),
+    0 0 0 1px hsl(var(--primary) / 0.2);
+  transform: scale(1.05);
 }
 
-/* For Firefox */
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 1.1) 0%,
+    hsl(var(--primary) / 1.2) 50%,
+    hsl(var(--accent) / 1.3) 100%
+  );
+  transform: scale(0.98);
+}
+
+::-webkit-scrollbar-corner {
+  background: hsl(var(--background));
+}
+
+/* Firefox Enhanced Scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #6a11cb #f0f0f0;
+  scrollbar-color: hsl(var(--primary)) hsl(var(--muted) / 0.1);
+}
+
+/* Dark mode adjustments */
+.dark ::-webkit-scrollbar-track {
+  background: hsl(var(--muted) / 0.05);
+  border-color: hsl(var(--border) / 0.1);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  border-color: hsl(var(--background));
+  box-shadow: 
+    0 4px 12px hsl(var(--primary) / 0.4),
+    inset 0 1px 0 hsl(var(--primary) / 0.5);
 }
