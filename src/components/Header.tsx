@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { Moon, Sun, Menu, X, Sparkles } from 'lucide-react';
 
 const Header = () => {
@@ -52,23 +53,25 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation with Enhanced Hover Effects */}
-        <nav className="hidden md:flex items-center space-x-2">
-          {menuItems.map((item, index) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={`
-                relative px-4 py-2 rounded-lg font-medium transition-all duration-300
-                text-muted-foreground hover:text-foreground
-                magnetic-button ripple-effect micro-bounce
-                stagger-${Math.min(index + 1, 5)}
-              `}
-            >
-              <span className="relative z-10">{item.label}</span>
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 hover:opacity-10 rounded-lg transition-opacity duration-300"></div>
-            </button>
-          ))}
-        </nav>
+        <ScrollArea className="hidden md:block max-w-2xl">
+          <nav className="flex items-center space-x-2 px-2">
+            {menuItems.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`
+                  relative px-4 py-2 rounded-lg font-medium transition-all duration-300
+                  text-muted-foreground hover:text-foreground whitespace-nowrap
+                  magnetic-button ripple-effect micro-bounce
+                  stagger-${Math.min(index + 1, 5)}
+                `}
+              >
+                <span className="relative z-10">{item.label}</span>
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 hover:opacity-10 rounded-lg transition-opacity duration-300"></div>
+              </button>
+            ))}
+          </nav>
+        </ScrollArea>
 
         <div className="flex items-center space-x-3">
           <Button
