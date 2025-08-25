@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
           
           <div className="mt-4 text-xs text-muted-foreground">
-            <p>Devotee of Lord Shiva, Hanuman & Chhatrapati Shivaji Maharaj</p>
+            <p>Kattar Hindu | Devotee of Lord Shiva, Hanuman & Chhatrapati Shivaji Maharaj</p>
           </div>
         </div>
       </div>

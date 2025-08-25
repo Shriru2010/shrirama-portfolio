@@ -4,8 +4,8 @@ const About = () => {
   const timelineItems = [{
     icon: <GraduationCap className="h-6 w-6" />,
     title: "Current Education",
-    subtitle: "10th Grade Student",
-    description: "Pursuing academic excellence while diving deep into programming and Sanskrit studies.",
+    subtitle: "10th Grade Student at Arundhati Gurukulam",
+    description: "Proudly studying at Arundhati Gurukulam, pursuing academic excellence while diving deep into programming and Sanskrit studies.",
     year: "2024"
   }, {
     icon: <Code className="h-6 w-6" />,
@@ -38,7 +38,7 @@ const About = () => {
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">I'm a dedicated student with a passion for yoga, and most of all, coding. I focus on Sanskrit computation, full-stack web development, and Java. My spiritual inspiration comes from Lord Shiva, Hanuman, and my hero—Chhatrapati Shivaji Maharaj.</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">I'm a kattar Hindu and dedicated student with a passion for yoga, and most of all, coding. I focus on Sanskrit computation, full-stack web development, and Java. My spiritual inspiration comes from Lord Shiva, Hanuman, and my hero—Chhatrapati Shivaji Maharaj.</p>
         </div>
 
         {/* Personal Info Card */}
