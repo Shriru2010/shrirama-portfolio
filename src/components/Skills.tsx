@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { Code, Database, Globe, Cpu, BookOpen, Zap } from 'lucide-react';
+import { Code, Database, Globe, Cpu, BookOpen, Zap, Shield } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
@@ -32,12 +32,23 @@ const Skills = () => {
         { name: "Chandas Analysis", level: 75, color: "bg-orange-400" },
         { name: "Matrix Calculators", level: 70, color: "bg-pink-500" }
       ]
+    },
+    {
+      icon: <Shield className="h-6 w-6" />,
+      title: "Ethical Hacking",
+      skills: [
+        { name: "Penetration Testing", level: 75, color: "bg-red-600" },
+        { name: "Network Security", level: 70, color: "bg-indigo-500" },
+        { name: "Web App Security", level: 72, color: "bg-green-600" },
+        { name: "CTF Challenges", level: 80, color: "bg-purple-600" }
+      ]
     }
   ];
 
   const tools = [
     "Git & GitHub", "VS Code", "IntelliJ IDEA", "Chrome DevTools", 
-    "Figma", "Sanskrit Tools", "Linux", "Windows"
+    "Figma", "Sanskrit Tools", "Linux", "Windows", "Kali Linux",
+    "Burp Suite", "Wireshark", "Metasploit", "Nmap", "HackTheBox"
   ];
 
   return (

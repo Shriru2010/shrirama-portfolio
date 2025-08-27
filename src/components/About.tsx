@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card';
-import { GraduationCap, Heart, Code, Dumbbell } from 'lucide-react';
+import { GraduationCap, Heart, Code, Dumbbell, Shield } from 'lucide-react';
 const About = () => {
   const timelineItems = [{
     icon: <GraduationCap className="h-6 w-6" />,
@@ -24,6 +24,12 @@ const About = () => {
     title: "Programming Journey",
     subtitle: "Sanskrit Computation & Full-Stack Development",
     description: "Specializing in Sanskrit computation tools, matrix calculators, and chandas-based applications.",
+    year: "2023+"
+  }, {
+    icon: <Shield className="h-6 w-6" />,
+    title: "Ethical Hacking",
+    subtitle: "Cybersecurity Enthusiast",
+    description: "Practicing penetration testing, CTF challenges, and vulnerability assessment. Passionate about securing digital systems.",
     year: "2023+"
   }, {
     icon: <Dumbbell className="h-6 w-6" />,

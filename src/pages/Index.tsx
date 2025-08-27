@@ -5,6 +5,7 @@ import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import FuturePlans from '@/components/FuturePlans';
+import EthicalHackerConsole from '@/components/EthicalHackerConsole';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import ParticleSystem from '@/components/ParticleSystem';
@@ -43,6 +44,7 @@ const Index = () => {
         <About />
         <Skills />
         <Projects />
+        <EthicalHackerConsole />
         <FuturePlans />
         <Contact />
       </main>

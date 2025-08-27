@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MessageCircle, Send, MapPin, Loader2 } from 'lucide-react';
+import { Mail, Phone, MessageCircle, Send, MapPin, Loader2, Github } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
 
@@ -74,6 +74,12 @@ const Contact = () => {
       label: "Snapchat",
       value: "shriru2010",
       href: "https://snapchat.com/add/shriru2010"
+    },
+    {
+      icon: <Github className="h-6 w-6" />,
+      label: "GitHub",
+      value: "@neorishi",
+      href: "https://github.com/neorishi"
     },
     // Removed the location entry as per user request
   ];
