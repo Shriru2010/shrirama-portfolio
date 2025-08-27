@@ -41,21 +41,22 @@ export default function EthicalHackerConsole() {
   return (
     <section id="ethical-hacking" className="py-20 relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 scroll-reveal">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Ethical <span className="gradient-text">Hacking</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Securing systems, one vulnerability at a time
-          </p>
-        </div>
-
         <Card className="neo-card card-3d p-8 bg-card/50 backdrop-blur-md neon-border overflow-hidden">
           <div className="font-mono">
-            {/* Terminal command prompt */}
-            <h3 className="text-2xl font-bold mb-8 text-primary">
-              <Typewriter text="root@portfolio:~# ./ethical_hacker.sh" speed={50} />
-            </h3>
+            {/* Terminal header bar */}
+            <div className="flex items-center space-x-2 mb-6 pb-4 border-b border-primary/20">
+              <div className="flex space-x-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <span className="text-muted-foreground text-sm">terminal@ethical-hacker</span>
+            </div>
+
+            {/* Heading with typewriter */}
+            <h2 className="text-3xl font-bold mb-8 text-primary">
+              <Typewriter text="root@portfolio:~# Ethical_Hacker" speed={70} />
+            </h2>
 
             {/* Skills */}
             <div className="mb-10">
