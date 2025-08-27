@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Download, Zap, Star, Code, Heart, Github } from 'lucide-react';
-
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0
+  });
   const fullText = "Blending Tradition with Technology";
-  
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -17,25 +18,24 @@ const Hero = () => {
         clearInterval(timer);
       }
     }, 100);
-
     return () => clearInterval(timer);
   }, []);
-
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY
+      });
     };
-
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
   const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('about')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Simplified Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Subtle gradient background */}
@@ -43,7 +43,9 @@ const Hero = () => {
         
         {/* Simple floating shapes */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float" style={{
+        animationDelay: '2s'
+      }}></div>
         
         {/* Subtle grid */}
         <div className="absolute inset-0 opacity-10">
@@ -94,7 +96,7 @@ const Hero = () => {
               </div>
               <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors">
                 <Code className="h-8 w-8 text-accent mx-auto mb-2" />
-                <div className="text-3xl font-bold text-accent">10+</div>
+                <div className="text-3xl font-bold text-accent">15+</div>
                 <div className="text-sm text-muted-foreground">Projects Built</div>
               </div>
               <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors">
@@ -106,30 +108,17 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="px-8 py-4 text-lg font-semibold"
-              onClick={scrollToAbout}
-            >
+            <Button size="lg" className="px-8 py-4 text-lg font-semibold" onClick={scrollToAbout}>
               Explore My Work
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="px-8 py-4 text-lg font-semibold"
-              onClick={() => window.open('https://github.com/Shriru2010', '_blank')}
-            >
+            <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold" onClick={() => window.open('https://github.com/Shriru2010', '_blank')}>
               GitHub Profile
               <Github className="ml-2 h-5 w-5" />
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="px-8 py-4 text-lg font-semibold"
-            >
+            <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold">
               Download Resume
               <Download className="ml-2 h-5 w-5" />
             </Button>
@@ -143,8 +132,6 @@ const Hero = () => {
           <div className="w-2 h-4 bg-primary rounded-full mt-3"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
