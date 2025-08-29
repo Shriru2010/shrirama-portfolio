@@ -24,6 +24,7 @@ const Contact = () => {
       await emailjs.send(
         'service_shrirama',
         'template_2ucd2b3',
+        'template_6llp0sp',
         {
           from_name: formData.name,
           from_email: formData.email,
