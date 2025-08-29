@@ -78,8 +78,8 @@ const Contact = () => {
     {
       icon: <Github className="h-6 w-6" />,
       label: "GitHub",
-      value: "@neorishi",
-      href: "https://github.com/neorishi"
+      value: "@shriru10",
+      href: "https://github.com/Shriru2010"
     },
     // Removed the location entry as per user request
   ];
