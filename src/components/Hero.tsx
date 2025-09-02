@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Shield, Code2, Sparkles } from 'lucide-react';
-
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
   const fullText = "Ethical Hacker | Student | Creator";
-  
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -18,21 +16,17 @@ const Hero = () => {
     }, 50);
     return () => clearInterval(timer);
   }, []);
-
   const scrollToWork = () => {
     document.getElementById('projects')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-
   const scrollToNext = () => {
     document.getElementById('about')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
+  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
       {/* Clean Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95"></div>
@@ -44,9 +38,7 @@ const Hero = () => {
         <div className="space-y-6 text-center max-w-4xl">
           {/* Killer Tagline */}
           <div className="animate-fade-in">
-            <p className="text-lg sm:text-xl text-muted-foreground mb-4">
-              Hey, I'm
-            </p>
+            <p className="text-lg sm:text-xl text-muted-foreground mb-4">JSR!!!, I'm</p>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black mb-6">
               <span className="text-foreground">Shrirama </span>
               <span className="text-primary">R</span>
@@ -87,21 +79,13 @@ const Hero = () => {
 
           {/* Big CTA Button */}
           <div className="space-y-4">
-            <Button 
-              size="lg" 
-              className="px-10 py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              onClick={scrollToWork}
-            >
+            <Button size="lg" className="px-10 py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" onClick={scrollToWork}>
               See My Work
               <ArrowDown className="ml-2 h-5 w-5 animate-bounce" />
             </Button>
             
             <div className="flex gap-4 justify-center">
-              <Button 
-                variant="outline" 
-                size="default"
-                onClick={() => window.open('https://github.com/Shriru2010', '_blank')}
-              >
+              <Button variant="outline" size="default" onClick={() => window.open('https://github.com/Shriru2010', '_blank')}>
                 <Github className="mr-2 h-4 w-4" />
                 GitHub
               </Button>
@@ -116,15 +100,11 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <button 
-        onClick={scrollToNext}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform"
-      >
+      <button onClick={scrollToNext} className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform">
         <div className="w-8 h-12 border-2 border-primary/50 rounded-full flex justify-center">
           <div className="w-2 h-4 bg-primary rounded-full mt-3"></div>
         </div>
       </button>
-    </section>
-  );
+    </section>;
 };
 export default Hero;
