@@ -38,7 +38,7 @@ const Hero = () => {
         <div className="space-y-6 text-center max-w-4xl">
           {/* Killer Tagline */}
           <div className="animate-fade-in">
-            <p className="text-lg sm:text-xl text-muted-foreground mb-4">JSR!!!, I'm</p>
+            <p className="text-lg sm:text-xl text-muted-foreground mb-4">जय श्रीराम!!!, I'm</p>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black mb-6">
               <span className="text-foreground">Shrirama </span>
               <span className="text-primary">R</span>
