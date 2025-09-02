@@ -165,6 +165,34 @@ export default {
 					}
 				},
 				// Advanced Animation Keyframes
+				'float': {
+					'0%, 100%': { 
+						transform: 'translateY(0px) translateX(0px)',
+						opacity: '0.8'
+					},
+					'33%': { 
+						transform: 'translateY(-30px) translateX(20px)',
+						opacity: '1'
+					},
+					'66%': { 
+						transform: 'translateY(20px) translateX(-20px)',
+						opacity: '0.8'
+					}
+				},
+				'float-delayed': {
+					'0%, 100%': { 
+						transform: 'translateY(0px) translateX(0px)',
+						opacity: '0.8'
+					},
+					'33%': { 
+						transform: 'translateY(30px) translateX(-20px)',
+						opacity: '1'
+					},
+					'66%': { 
+						transform: 'translateY(-20px) translateX(20px)',
+						opacity: '0.8'
+					}
+				},
 				'float-up': {
 					'0%, 100%': { transform: 'translateY(0px)' },
 					'50%': { transform: 'translateY(-20px)' }
@@ -218,6 +246,8 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				// Enhanced Animations
+				'float': 'float 8s ease-in-out infinite',
+				'float-delayed': 'float-delayed 8s ease-in-out infinite 2s',
 				'float-up': 'float-up 6s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 				'shimmer': 'shimmer 2s ease-in-out infinite',
