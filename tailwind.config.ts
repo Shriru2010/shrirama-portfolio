@@ -23,6 +23,10 @@ export default {
 				inter: ['Inter', 'sans-serif'],
 				jetbrains: ['JetBrains Mono', 'monospace'],
 				grotesk: ['Space Grotesk', 'sans-serif'],
+				bebas: ['Bebas Neue', 'cursive'],
+				oswald: ['Oswald', 'sans-serif'],
+				righteous: ['Righteous', 'cursive'],
+				russo: ['Russo One', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
