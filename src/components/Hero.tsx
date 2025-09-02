@@ -13,7 +13,7 @@ const Hero = () => {
     "Ethical Hacker",
     "Security Researcher", 
     "Full-Stack Developer",
-    "Sanskrit Scholar",
+    "Sanskrit Lerner",
     "Problem Solver"
   ];
   
