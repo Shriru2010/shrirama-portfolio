@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Download, Zap, Star, Code, Heart, Github } from 'lucide-react';
+import { ArrowDown, Github, Shield, Code2, Sparkles } from 'lucide-react';
+
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0
-  });
-  const fullText = "Blending Tradition with Technology";
+  const fullText = "Ethical Hacker | Student | Creator";
+  
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -17,121 +15,116 @@ const Hero = () => {
       } else {
         clearInterval(timer);
       }
-    }, 100);
+    }, 50);
     return () => clearInterval(timer);
   }, []);
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY
-      });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-  const scrollToAbout = () => {
+
+  const scrollToWork = () => {
+    document.getElementById('projects')?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToNext = () => {
     document.getElementById('about')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Simplified Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Subtle gradient background */}
-        <div className="absolute inset-0 bg-gradient-hero opacity-50"></div>
-        
-        {/* Simple floating shapes */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float" style={{
-        animationDelay: '2s'
-      }}></div>
-        
-        {/* Subtle grid */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-        </div>
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
+      {/* Clean Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95"></div>
+        <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 flex items-center justify-center relative z-10">
-        {/* Enhanced Content with Advanced Animations */}
-        <div className="space-y-8 text-center max-w-5xl">
-          <div className="space-y-6">
-            {/* Om Symbol above name */}
-            <div className="mb-6">
-              <span className="text-3xl lg:text-4xl font-orbitron font-bold text-primary hover:scale-105 transition-transform duration-300 inline-block">
-                ॐ
-              </span>
-            </div>
-            
-            <h1 className="text-5xl lg:text-7xl font-black leading-tight">
-              <span className="block text-foreground">
-                Shrirama
-              </span>
-              <span className="block text-primary text-6xl lg:text-8xl">
-                R
-              </span>
+      <div className="container mx-auto flex items-center justify-center relative z-10">
+        <div className="space-y-6 text-center max-w-4xl">
+          {/* Killer Tagline */}
+          <div className="animate-fade-in">
+            <p className="text-lg sm:text-xl text-muted-foreground mb-4">
+              Hey, I'm
+            </p>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black mb-6">
+              <span className="text-foreground">Shrirama </span>
+              <span className="text-primary">R</span>
             </h1>
-            
-            <div className="h-20 flex items-center justify-center">
-              <p className="text-2xl lg:text-3xl text-muted-foreground typing-animation font-grotesk animate-fade-in-up stagger-3">
+            <div className="h-12 flex items-center justify-center">
+              <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-semibold">
                 {typedText}
+                <span className="animate-pulse text-primary">|</span>
               </p>
             </div>
           </div>
 
-          <div className="space-y-6 animate-fade-in-up stagger-4">
-            <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              जय श्रीराम, I'm Shrirama R, a passionate teen developer devoted to 
-              <span className="gradient-text font-semibold"> Sanskrit computation</span> and 
-              <span className="gradient-text font-semibold"> full-stack technology</span>.
-            </p>
+          {/* Quick Impact Statement */}
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up">
+            Securing systems, building solutions, and blending 
+            <span className="text-primary font-semibold"> Sanskrit traditions</span> with 
+            <span className="text-accent font-semibold"> modern technology</span>
+          </p>
 
-            {/* Simple Stat Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto mt-12">
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors">
-                <Star className="h-8 w-8 text-primary mx-auto mb-2" />
-                <div className="text-3xl font-bold text-primary">3+</div>
-                <div className="text-sm text-muted-foreground">Years Coding</div>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors">
-                <Code className="h-8 w-8 text-accent mx-auto mb-2" />
-                <div className="text-3xl font-bold text-accent">15+</div>
-                <div className="text-sm text-muted-foreground">Projects Built</div>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors">
-                <Heart className="h-8 w-8 text-secondary mx-auto mb-2" />
-                <div className="text-3xl font-bold text-secondary">∞</div>
-                <div className="text-sm text-muted-foreground">Passion</div>
-              </div>
+          {/* Simplified Stats */}
+          <div className="flex flex-wrap justify-center gap-8 py-8 animate-fade-in-up">
+            <div className="flex items-center gap-2">
+              <Shield className="h-5 w-5 text-primary" />
+              <span className="text-2xl font-bold text-primary">100+</span>
+              <span className="text-sm text-muted-foreground">CTFs Solved</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Code2 className="h-5 w-5 text-accent" />
+              <span className="text-2xl font-bold text-accent">15+</span>
+              <span className="text-sm text-muted-foreground">Projects</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-5 w-5 text-secondary" />
+              <span className="text-2xl font-bold text-secondary">3+</span>
+              <span className="text-sm text-muted-foreground">Years</span>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="px-8 py-4 text-lg font-semibold" onClick={scrollToAbout}>
-              Explore My Work
-              <ArrowDown className="ml-2 h-5 w-5" />
+          {/* Big CTA Button */}
+          <div className="space-y-4">
+            <Button 
+              size="lg" 
+              className="px-10 py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              onClick={scrollToWork}
+            >
+              See My Work
+              <ArrowDown className="ml-2 h-5 w-5 animate-bounce" />
             </Button>
             
-            <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold" onClick={() => window.open('https://github.com/Shriru2010', '_blank')}>
-              GitHub Profile
-              <Github className="ml-2 h-5 w-5" />
-            </Button>
-            
-            <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold">
-              Download Resume
-              <Download className="ml-2 h-5 w-5" />
-            </Button>
+            <div className="flex gap-4 justify-center">
+              <Button 
+                variant="outline" 
+                size="default"
+                onClick={() => window.open('https://github.com/Shriru2010', '_blank')}
+              >
+                <Github className="mr-2 h-4 w-4" />
+                GitHub
+              </Button>
+            </div>
           </div>
+
+          {/* Curiosity Hook */}
+          <p className="text-sm text-muted-foreground pt-8 animate-pulse">
+            👇 Wanna see how I hack and build? Keep scrolling...
+          </p>
         </div>
       </div>
 
-      {/* Simple Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* Scroll Indicator */}
+      <button 
+        onClick={scrollToNext}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform"
+      >
         <div className="w-8 h-12 border-2 border-primary/50 rounded-full flex justify-center">
           <div className="w-2 h-4 bg-primary rounded-full mt-3"></div>
         </div>
-      </div>
-    </section>;
+      </button>
+    </section>
+  );
 };
 export default Hero;
