@@ -2,12 +2,15 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Moon, Sun, Menu, X, Sparkles } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,19 +26,23 @@ const Header = () => {
     document.documentElement.classList.toggle('light');
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (path: string) => {
+    navigate(path);
     setIsMenuOpen(false);
+    // Track navigation
+    window.gtag?.('event', 'navigation_click', {
+      from: location.pathname,
+      to: path
+    });
   };
 
   const menuItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'future', label: 'Future Plans' },
-    { id: 'contact', label: 'Contact' },
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/skills', label: 'Skills' },
+    { path: '/projects', label: 'Projects' },
+    { path: '/future-plans', label: 'Future Plans' },
+    { path: '/contact', label: 'Contact' },
   ];
 
   return (
@@ -60,31 +67,34 @@ const Header = () => {
           : 'backdrop-blur-xl bg-gradient-glass border-b border-border/10'
       }`}>
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="font-orbitron font-bold text-2xl relative group cursor-pointer">
+          <Link to="/" className="font-orbitron font-bold text-2xl relative group cursor-pointer">
             <span className="prismatic-text hover:scale-110 transition-transform duration-300 inline-block">
               SR
             </span>
             <div className="absolute -inset-2 bg-gradient-primary rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
             <Sparkles className="absolute -top-1 -right-1 h-4 w-4 text-primary animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </div>
+          </Link>
 
           {/* Desktop Navigation with Enhanced Hover Effects */}
           <ScrollArea className="hidden md:block max-w-2xl">
             <nav className="flex items-center space-x-2 px-2">
               {menuItems.map((item, index) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                <Link
+                  key={item.path}
+                  to={item.path}
                   className={`
                     relative px-4 py-2 rounded-lg font-medium transition-all duration-300
-                    text-muted-foreground hover:text-foreground whitespace-nowrap
-                    magnetic-button ripple-effect micro-bounce
+                    whitespace-nowrap magnetic-button ripple-effect micro-bounce
                     stagger-${Math.min(index + 1, 5)}
+                    ${location.pathname === item.path 
+                      ? 'text-primary bg-primary/10' 
+                      : 'text-muted-foreground hover:text-foreground'
+                    }
                   `}
                 >
                   <span className="relative z-10">{item.label}</span>
                   <div className="absolute inset-0 bg-gradient-primary opacity-0 hover:opacity-10 rounded-lg transition-opacity duration-300"></div>
-                </button>
+                </Link>
               ))}
             </nav>
           </ScrollArea>
@@ -135,19 +145,23 @@ const Header = () => {
           <div className="md:hidden backdrop-blur-2xl bg-gradient-glass-strong border-t border-primary/20 animate-slide-down">
             <nav className="container mx-auto px-4 py-6 space-y-2">
               {menuItems.map((item, index) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                <Link
+                  key={item.path}
+                  to={item.path}
                   className={`
                     block w-full text-left p-4 rounded-xl font-medium transition-all duration-300
-                    text-muted-foreground hover:text-foreground hover:bg-gradient-primary/10
-                    magnetic-button ripple-effect data-stream
+                    hover:bg-gradient-primary/10 magnetic-button ripple-effect data-stream
                     animate-fade-in-up stagger-${Math.min(index + 1, 5)}
+                    ${location.pathname === item.path 
+                      ? 'text-primary bg-primary/10' 
+                      : 'text-muted-foreground hover:text-foreground'
+                    }
                   `}
                   style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="relative z-10">{item.label}</span>
-                </button>
+                </Link>
               ))}
             </nav>
           </div>
