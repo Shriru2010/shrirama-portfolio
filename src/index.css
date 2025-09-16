@@ -32,27 +32,30 @@
     --popover: 218 27% 8%;
     --popover-foreground: 213 31% 97%;
 
-    /* Brand Colors - Dynamic Spectrum */
-    --primary: 240 100% 70%;
-    --primary-foreground: 213 31% 97%;
-    --primary-glow: 262 83% 80%;
-    --primary-dark: 240 100% 60%;
-    --primary-light: 240 100% 80%;
+    /* Brand Colors - Saffron Orange Theme */
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 30 100% 65%;
+    --primary-dark: 20 90% 45%;
+    --primary-light: 30 95% 65%;
+    --primary-rgb: 251, 146, 60;
 
-    /* Secondary Accent - Aqua Spectrum */
-    --secondary: 180 100% 70%;
+    /* Secondary Accent - Golden Yellow */
+    --secondary: 45 90% 55%;
     --secondary-foreground: 218 27% 8%;
-    --secondary-glow: 200 100% 75%;
+    --secondary-glow: 50 100% 65%;
+    --secondary-rgb: 217, 162, 28;
 
     /* Muted Elements Enhanced */
     --muted: 218 27% 12%;
     --muted-foreground: 215 20% 70%;
     --muted-glass: 220 20% 15%;
 
-    /* Accent - Magenta Spectrum */
-    --accent: 280 100% 75%;
-    --accent-foreground: 218 27% 8%;
-    --accent-glow: 300 100% 80%;
+    /* Accent - Deep Saffron */
+    --accent: 20 85% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 25 100% 60%;
+    --accent-rgb: 194, 65, 12;
 
     /* Tertiary - Orange/Pink Spectrum */
     --tertiary: 320 100% 70%;
