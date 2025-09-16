@@ -875,3 +875,6 @@
     transform: scale(1);
   }
 }
+a[href*="lovable.so"] {
+  display: none !important;
+}
