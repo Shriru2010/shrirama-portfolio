@@ -875,6 +875,6 @@
     transform: scale(1);
   }
 }
-a[href*="lovable.so"] {
+.lovable-badge, [class*="lovable"] {
   display: none !important;
 }
