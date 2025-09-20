@@ -15,7 +15,7 @@ const Hero = () => {
     "Proud ब्राह्मण",
     "Ethical Hacker",
     "Security Researcher",
-    "Sanskrit Scholar",
+    "Sanskrit Learner",
     "Full-Stack Developer"
   ];
   
