@@ -11,11 +11,12 @@ const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   
   const roles = [
+    "कट्टर सनातनी",
+    "Proud ब्राह्मण",
     "Ethical Hacker",
-    "Security Researcher", 
-    "Full-Stack Developer",
-    "Sanskrit Learner",
-    "Problem Solver"
+    "Security Researcher",
+    "Sanskrit Scholar",
+    "Full-Stack Developer"
   ];
   
   useEffect(() => {
@@ -118,8 +119,8 @@ const Hero = () => {
                 <div className="relative px-6 py-3 rounded-full bg-background/40 backdrop-blur-xl border border-primary/30">
                   <div className="flex items-center gap-2">
                     <Lock className={`h-4 w-4 transition-all ${isHovered ? 'text-accent rotate-180' : 'text-primary'}`} />
-                    <span className="text-sm font-jetbrains text-foreground/90 font-semibold">
-                      {isHovered ? 'जय श्रीराम!' : 'SECURE CONNECTION ESTABLISHED'}
+              <span className="text-sm font-jetbrains text-foreground/90 font-semibold">
+                      {isHovered ? 'जय श्रीराम! 🚩' : 'हर हर महादेव! SECURE DHARMIC CONNECTION'}
                     </span>
                     <Eye className={`h-4 w-4 transition-all ${isHovered ? 'text-accent' : 'text-primary/50'}`} />
                   </div>
@@ -138,7 +139,7 @@ const Hero = () => {
               
               {/* Sanskrit Tagline */}
               <p className="text-xl font-oswald text-primary/90 mb-6 drop-shadow-[0_0_15px_rgba(var(--primary-rgb),0.6)]">
-                सत्यमेव जयते | Truth Alone Triumphs
+                ॐ नमः शिवाय | सत्यमेव जयते | कट्टर सनातनी ब्राह्मण 🚩
               </p>
             </div>
             
@@ -166,14 +167,14 @@ const Hero = () => {
           <div className="relative max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="backdrop-blur-sm bg-background/30 p-6 rounded-lg border border-primary/20">
               <p className="text-xl sm:text-2xl text-foreground/90 leading-relaxed font-oswald font-light">
-                Breaking into systems legally, building secure solutions, and bridging 
-                <span className="text-primary font-semibold"> ancient wisdom</span> with 
-                <span className="text-accent font-semibold"> cutting-edge tech</span>
+                Proud follower of <span className="text-primary font-bold">सनातन धर्म</span>, 
+                carrying forward the <span className="text-accent font-bold">ब्राह्मण परंपरा</span> while
+                securing digital realms and building tomorrow's technology
               </p>
               
               {/* Mystery Quote */}
               <p className="mt-6 text-lg text-primary/80 italic">
-                "धर्मो रक्षति रक्षितः | Technology with Tradition"
+                "धर्मो रक्षति रक्षितः | वसुधैव कुटुम्बकम् | Technology meets Tradition"
               </p>
             </div>
           </div>
